@@ -65,7 +65,7 @@ class Configuration:
     lr_end: float = 0.0001             #  only for "polynomial"
     
     # Dataset
-    data_folder = "./data/VIGOR"
+    data_folder = "/kaggle/input/vigor-dataset/VIGOR"
     same_area: bool = True             # True: same | False: cross
     ground_cutting = 0                 # cut ground upper and lower
    

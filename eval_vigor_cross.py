@@ -25,7 +25,7 @@ class Configuration:
     normalize_features: bool = True    
     
     # Dataset
-    data_folder = "./data/VIGOR"
+    data_folder = "/kaggle/input/vigor-dataset/VIGOR"
     same_area: bool = False            # True: same | False: cross
     ground_cutting = 0                 # cut ground upper and lower
    
