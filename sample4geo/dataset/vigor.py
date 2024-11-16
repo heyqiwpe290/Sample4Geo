@@ -39,7 +39,7 @@ class VigorDatasetTrain(Dataset):
         # load sat list 
         sat_list = []
         for city in self.cities:
-            df_tmp = pd.read_csv(f'{data_folder}/splits/{city}/satellite_list.txt', header=None, delim_whitespace=True)
+            df_tmp = pd.read_csv(f'{data_folder}/splits/splits/{city}/satellite_list.txt', header=None, delim_whitespace=True)
             df_tmp = df_tmp.rename(columns={0: "sat"})
             df_tmp["path"] = df_tmp.apply(lambda x: f'{data_folder}/satellite/{city}/{x.sat}', axis=1)
             sat_list.append(df_tmp)
@@ -56,9 +56,9 @@ class VigorDatasetTrain(Dataset):
         for city in self.cities:
 
             if same_area:
-                df_tmp = pd.read_csv(f'{data_folder}/splits/{city}/same_area_balanced_train.txt', header=None, delim_whitespace=True)
+                df_tmp = pd.read_csv(f'{data_folder}/splits/splits/{city}/same_area_balanced_train.txt', header=None, delim_whitespace=True)
             else:
-                df_tmp = pd.read_csv(f'{data_folder}/splits/{city}/pano_label_balanced.txt', header=None, delim_whitespace=True)
+                df_tmp = pd.read_csv(f'{data_folder}/splits/splits/{city}/pano_label_balanced.txt', header=None, delim_whitespace=True)
             
             df_tmp = df_tmp.loc[:, [0, 1, 4, 7, 10]].rename(columns={0:  "ground",
                                                                      1:  "sat",
@@ -297,7 +297,7 @@ class VigorDatasetEval(Dataset):
         # load sat list 
         sat_list = []
         for city in self.cities:
-            df_tmp = pd.read_csv(f'{data_folder}/splits/{city}/satellite_list.txt', header=None, delim_whitespace=True)
+            df_tmp = pd.read_csv(f'{data_folder}/splits/splits/{city}/satellite_list.txt', header=None, delim_whitespace=True)
             df_tmp = df_tmp.rename(columns={0: "sat"})
             df_tmp["path"] = df_tmp.apply(lambda x: f'{data_folder}/satellite/{city}/{x.sat}', axis=1)
             sat_list.append(df_tmp)
@@ -314,9 +314,9 @@ class VigorDatasetEval(Dataset):
         for city in self.cities:
             
             if same_area:
-                df_tmp = pd.read_csv(f'{data_folder}/splits/{city}/same_area_balanced_{split}.txt', header=None, delim_whitespace=True)
+                df_tmp = pd.read_csv(f'{data_folder}/splits/splits/{city}/same_area_balanced_{split}.txt', header=None, delim_whitespace=True)
             else:
-                df_tmp = pd.read_csv(f'{data_folder}/splits/{city}/pano_label_balanced.txt', header=None, delim_whitespace=True)
+                df_tmp = pd.read_csv(f'{data_folder}/splits/splits/{city}/pano_label_balanced.txt', header=None, delim_whitespace=True)
   
             
             df_tmp = df_tmp.loc[:, [0, 1, 4, 7, 10]].rename(columns={0:  "ground",
