@@ -57,7 +57,7 @@ for i, idx in enumerate(train_sat_ids):
     near_neighbors[idx] = train_sat_ids[ids_near[i]].tolist()
 
 print("Saving...")  
-with open("./data/VIGOR/gps_dict_same.pkl", "wb") as f:
+with open("/kaggle/working/Sample4Geo/sample4geo/data/VIGOR/gps_dict_same.pkl", "wb") as f:
     pickle.dump(near_neighbors, f)
     
     
@@ -111,5 +111,5 @@ for i, idx in enumerate(train_sat_ids):
     near_neighbors[idx] = train_sat_ids[ids_near[i]].tolist()    
     
 print("Saving...")  
-with open("./data/VIGOR/gps_dict_cross.pkl", "wb") as f:
+with open("/kaggle/working/Sample4Geo/sample4geo/data/VIGOR/gps_dict_cross.pkl", "wb") as f:
     pickle.dump(near_neighbors, f)   
