@@ -59,6 +59,7 @@ for i, idx in enumerate(train_sat_ids):
 print("Saving...")  
 with open("/kaggle/working/Sample4Geo/sample4geo/data/VIGOR/gps_dict_same.pkl", "wb") as f:
     pickle.dump(near_neighbors, f)
+    f.close()
     
     
 #-----------------------------------------------------------------------------#
