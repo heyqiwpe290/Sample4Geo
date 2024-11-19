@@ -74,7 +74,7 @@ class Configuration:
     prob_flip: float = 0.5             # flipping the sat image and ground images simultaneously
     
     # Savepath for model checkpoints
-    model_path: str = "./vigor_same"
+    model_path: str = "/kaggle/working/Sample4Geo/vigor_same"
     
     # Eval before training
     zero_shot: bool = False  
