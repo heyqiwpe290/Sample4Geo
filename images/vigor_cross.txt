@@ -1,0 +1,20 @@
+Model: DINOv2
+
+GPUs available: 
+Image Size Sat: (384, 384)
+Image Size Ground: (192, 768)
+Mean: [0.485, 0.456, 0.406]
+Std:  [0.229, 0.224, 0.225]
+
+Query Images Test: 1237
+Reference Images Test: 1237
+
+--------------------------[VIGOR Cross]--------------------------
+Processing batches: 100%|██████████| 1237/1237 [20:19<00:00, 7.52 it/s]
+Evaluation Results:
+R@1: 63.29%
+R@5: 85.10%
+R@10: 89.05%
+Hit Rate: 71.85%
+
+

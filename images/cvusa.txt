@@ -1,0 +1,17 @@
+Model: dinov2_vits14_MixVPR
+
+GPUs available: 
+Image Size Sat: (448, 448)
+Image Size Ground: (448, 448)
+Mean: [0.485, 0.456, 0.406]
+Std: [0.229, 0.224, 0.225]
+
+Reference Images Test: 8884
+Query Images Test: 8884
+
+--------------------------[CVUSA_TEST]--------------------------
+Processing batches: 100%|██████████| 8884/8884 [40:35<00:00, 32.21 it/s]
+Evaluation Results:
+R@1: 98.86%
+R@5: 98.98%
+R@10: 99.85%
